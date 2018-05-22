@@ -5,7 +5,7 @@ date:   2018-05-22 14:32:04 +0700
 categories: [python, security]
 ---
 
-```python
+```Python
 >>> #hex_encode = 'summonagus'.encode('hex')
 >>> hex_encode = '73756d6d6f6e61677573'
 >>> chip  = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
