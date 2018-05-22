@@ -1,42 +1,34 @@
 ---
 layout: post
-title:  "new posting"
+title:  "사용자가 정의한 함수"
 date:   2018-05-22 14:32:04 +0700
 categories: [python, security]
 ---
 
-```
-Hello
-```
-1) 모든 포스팅은 순수하게 개인의 공부 목적으로 작성됩니다.
+**함수는 크게 2가지로 분류**
 
-### 함수는 한마디로,
-자주 사용하는 혹은 복잡한 수식을 미리 저장했다가 필요할 때 꺼내쓰는 것
-
-
-함수는 크게 2가지로 나눌 수가 있습니다.
-<br>
 1) 파이썬에서 정의한 빌트인 함수
 sum, enumerate, join, split 등
-자세한 내용은 to be continue...
+_자세한 내용은 to be continue..._
 
 
 2) 사용자가 정의한 def 함수
 
 (1) def 함수의 기본 형식
-<br><br>
+
+```
 def 함수명(매개변수[parameters]):
   동작(또는 인수[arguments])
-<br><br>
-매개변수(함수로 전달되는 값의 변수)
-인수(함수로 전달되는 값)
-﻿<br>
+```
+
 [추가설명]
 함수를 정의할 때는 매개변수(parameter)
 함수를 호출할 때는 인자(arguments)라고 불린다﻿
-﻿<br>
+
+
 매개변수와 인자를 혼동해서 사용하기도 한다는데 아직 갈 길이 먼 것 같다.
-<br>
+
+
 즉, 매개변수는 변수(variable)
 인자는 값(value)로 보는 것이 일반적이다.
 매개변수는 함수의 정의의 한 부분으로 변하지 않지만
@@ -47,7 +39,6 @@ def 함수명(매개변수[parameters]):
 
 1-1. 리턴값이 있는 함수 정의
 
-수정했다!!!수정했어.
 ```python
 >>> def reuturn_true():
 >>>  return True
@@ -56,21 +47,19 @@ def 함수명(매개변수[parameters]):
 >>>
 ```
 
-<br><br>
 [해설] return_true() 에 return True 값을 받는다.
 Bool(true or false) 값을 가진다
 받는 값은 참(true)로 출력은 true가 된다
-<br><br>
+
 
 1-2. 매개변수를 사용하는 함수 정의
-<br>
+
 ```python
 def print_arguments(sth):
         print(sth)
 print_arguments('ABC')
 #ABC
 ```
-<br><br>
 
 실제 예제
 ```python
@@ -80,7 +69,7 @@ def call_function():
 call_function()
 # call function!
 ```
-<br><br>
+
 [해설]
 1) call_function 이란 함수를 생성
 2) 괄호() 안에 print('call function!') 형식의 str 을 함수에 내장
