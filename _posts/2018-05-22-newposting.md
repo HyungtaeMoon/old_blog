@@ -64,11 +64,10 @@ def 함수명(매개변수[parameters]):
 
 1-1. 리턴값이 있는 함수 정의
 
-```python
-def return_true():
-        return True
+```Python
+def reuturn_true():
+  return True
 return_true()
-#True
 ```
 
 <br><br>
