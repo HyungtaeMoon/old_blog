@@ -5,7 +5,20 @@ date:   2018-05-22 14:32:04 +0700
 categories: [python, security]
 ---
 
-'1') 모든 포스팅은 순수하게 개인의 공부 목적으로 작성됩니다.
+```python
+>>> #hex_encode = 'summonagus'.encode('hex')
+>>> hex_encode = '73756d6d6f6e61677573'
+>>> chip  = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
+>>>
+>>> hex_encode
+'73756d6d6f6e61677573'
+>>> chip
+'76753d3d3f3e31377576'
+>>>
+>>>
+```
+
+1) 모든 포스팅은 순수하게 개인의 공부 목적으로 작성됩니다.
 
 2) 포스팅의 톤 앤 매너는 아주 편한 말투를 사용할 수 있습니다.
 
@@ -119,6 +132,7 @@ student('hyungtae.moon', 34, 'male')
 >>>
 >>> {'name' : 'hyungtae.moon', 'age' : 34, 'gender' : 'male'}
 ```
+
 <br><br>
 
 ```python
