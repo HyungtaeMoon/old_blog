@@ -5,7 +5,7 @@ date:   2018-05-22 14:32:04 +0700
 categories: [python, security]
 ---
 
-```Python
+```python
 >>> #hex_encode = 'summonagus'.encode('hex')
 >>> hex_encode = '73756d6d6f6e61677573'
 >>> chip  = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
@@ -65,13 +65,13 @@ def 함수명(매개변수[parameters]):
 1-1. 리턴값이 있는 함수 정의
 
 수정했다.
-```Python
->>> def reuturn_true():
->>>  return True
->>> return_true()
->>>
->>>
-```
+        ```Python
+        >>> def reuturn_true():
+        >>>  return True
+        >>> return_true()
+        >>>
+        >>>
+        ```
 
 <br><br>
 [해설] return_true() 에 return True 값을 받는다.
