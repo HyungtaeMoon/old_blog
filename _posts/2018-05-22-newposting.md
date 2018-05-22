@@ -5,27 +5,10 @@ date:   2018-05-22 14:32:04 +0700
 categories: [python, security]
 ---
 
-```python
->>> #hex_encode = 'summonagus'.encode('hex')
->>> hex_encode = '73756d6d6f6e61677573'
->>> chip  = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
->>>
->>> hex_encode
-'안에 코드를 수정했어'
->>> chip
-'76753d3d3f3e31377576'
->>>
->>>
 ```
-
+Hello
+```
 1) 모든 포스팅은 순수하게 개인의 공부 목적으로 작성됩니다.
-
-2) 포스팅의 톤 앤 매너는 아주 편한 말투를 사용할 수 있습니다.
-
-﻿3) 틀린 내용은 댓글을 통해 알려주시면 감사한 마음으로 수정을 하도록 하겠습니다.
-
-4) 포스팅 내용과 관련하여 저작권 문제 발생 시 언제든지 삭제를 진행하겠습니다.
-<p><p>
 
 ### 함수는 한마디로,
 자주 사용하는 혹은 복잡한 수식을 미리 저장했다가 필요할 때 꺼내쓰는 것
@@ -65,13 +48,13 @@ def 함수명(매개변수[parameters]):
 1-1. 리턴값이 있는 함수 정의
 
 수정했다!!!수정했어.
-        ```python
-        >>> def reuturn_true():
-        >>>  return True
-        >>> return_true()
-        >>>
-        >>>
-        ```
+```python
+>>> def reuturn_true():
+>>>  return True
+>>> return_true()
+>>>
+>>>
+```
 
 <br><br>
 [해설] return_true() 에 return True 값을 받는다.
@@ -141,20 +124,6 @@ student('hyungtae.moon', 34, 'male')
 >>> #hex_encode = 'summonagus'.encode('hex')
 >>> hex_encode = '73756d6d6f6e61677573'
 >>> chip = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
->>>
->>> hex_encode
-'73756d6d6f6e61677573'
->>> chip
-'76753d3d3f3e31377576'
->>>
->>>
-```
-
-
-```python
->>> #hex_encode = 'summonagus'.encode('hex')
->>> hex_encode = '73756d6d6f6e61677573'
->>> chip  = ''.join([ str(int(a)*2) if a.isdigit() and int(a) == 3 else str(int(a)/2) if a.isdigit() and int(a) == 6 else a for a in hex_encode ])
 >>>
 >>> hex_encode
 '73756d6d6f6e61677573'

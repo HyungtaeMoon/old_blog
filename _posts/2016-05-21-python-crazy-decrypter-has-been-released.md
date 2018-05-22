@@ -10,7 +10,9 @@ Hello gays, this night i want to share my Python Crazy Decrypter tool. Python Cr
 This Python Crazy Decrypter tool use the brute force method with complete charachters or with custom charachters choices, and with Hash Type Checker. But, of course it will spend a long time if the result of hash have a very long length, coz this use the brute force method.
 
 **Example Usage**
-
+```
+hello
+```
 ```
 $ crazy_decrypter -a 2f2ec1296695a9fb3251bbc94a2e0cef -c ichp 4 4
 ```
