@@ -71,6 +71,7 @@ defense2 = shield()
 결과> 클래스 자체에는 오류가 발생하지 않는다.
 <br>
 그러나 인스턴스를 할당(mht = User('문형태', 0, 0)하면 아래와 같은 오류가 발생한다.
+<br>
 ```
 TypeError                                 Traceback (most recent call last)
 <ipython-input-19-67beda220de8> in <module>()
@@ -114,17 +115,18 @@ mht.equip(sword1)
 공격력이 30가 증가하였습니다. (equip 메서드)
 문형태님 공격력이 30 올랐습니다. (sword 메서드)
 ```
+
 역순으로 디버깅을 해본다.(완전 역순은 아니고)
 <br>
 1) mht.equip(sword1)를 호출
 1-1) `mht`('문형태', 0, 0)
+<br>
 
 
 1-2) `equip` > class 접근 > 클래스 안의 equip 메서드에 접근
 1-2-1)
+<br>
 
 
 1-3) `sword1` > 선언한 인스턴스 sword() 접근 > 클래스 sword 접근
-
-
 <br>
