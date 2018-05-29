@@ -21,7 +21,7 @@ class User:
     def equip(self, item):
         item.use(self)
 #         print(f'{self.name}님 공격력이 {self.atk} 올랐습니다.')
-
+```
 
 class sword:
     def use(self, user):
