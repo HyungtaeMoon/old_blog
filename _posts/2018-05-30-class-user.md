@@ -22,7 +22,9 @@ class User:
         item.use(self)
 #         print(f'{self.name}님 공격력이 {self.atk} 올랐습니다.')
 ```
+<br>
 
+```
 class sword:
     def use(self, user):
         user.atk += 10
@@ -33,21 +35,25 @@ class shield:
         user.defense += 10
         print(f'방어력이 {user.defense}가 증가하였습니다.')
 ```
+
+<br>
+
 ```
 mht = User('문형태', 0, 0)
 
 >>>(문형태)님이 생성되었습니다.
 >>>현재 공격력은 0 입니다.
 >>>현재 방어력은 0입니다.
-<br>
 ```
+<br>
+<br>
+
 ```
 클래스를 아래의 인스턴스에 할당
 
 sword1 = sword()
 defense2 = shield()
 
->>>
 ```
 
 <br>
@@ -57,6 +63,7 @@ defense2 = shield()
 <br>
 <br>
 `쉬운답변` init의 뜻은 initialize로 초기화 하다의 뜻을 가지고 있다.
+<br>
 <br>
 `내 멋대로 해석`외부에서 인스턴스.클래스 가 호출될 때 들어오는 값이 초기화가 되어야 한다. 그래야 클래스 자체가 코딩한대로 돌아가기 때문이다.
 <br>
@@ -73,6 +80,7 @@ TypeError: object() takes no parameters
 ```
 (당장 내가 보고 해석할 짬은 안된다.)
 <br>
+
 `실험2` 인스턴스를 생성할 때 init 로 초기화된다면, 인스턴스에 아무값이나 넣어도 될까?
 test1) mht = User('문형태', 3, 5)
 test2 mht = User('문형태', '', '')
