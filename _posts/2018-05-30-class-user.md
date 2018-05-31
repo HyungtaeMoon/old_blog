@@ -4,7 +4,7 @@ title:  "코드분석"
 date:   2018-05-30 19:41:04 +0700
 categories: [python, security]
 ---
-`코드 분석하기`
+`코드 분석하기` `아이템을 사용한 강화`
 
 ```python
 class User:
@@ -21,10 +21,6 @@ class User:
     def equip(self, item):
         item.use(self)
 #         print(f'{self.name}님 공격력이 {self.atk} 올랐습니다.')
-```
-<br>
-
-```
 class sword:
     def use(self, user):
         user.atk += 10
@@ -57,21 +53,23 @@ defense2 = shield()
 ```
 
 <br>
-<br>
-<h2> 첫번째 궁금증
-**__init__ 은 무엇이고, 메서드명을 다른 이름으로 지정하면 어떻게 돌까?**
-<br>
-<br>
-`쉬운답변` init의 뜻은 initialize로 초기화 하다의 뜻을 가지고 있다.
+`첫번째 궁금증`
+**__init__ 은 무엇이고, 메서드명을 다른 이름으로 지정하면  과연 돌아갈까?**
 <br>
 <br>
-`내 멋대로 해석`외부에서 인스턴스.클래스 가 호출될 때 들어오는 값이 초기화가 되어야 한다. 그래야 클래스 자체가 코딩한대로 돌아가기 때문이다.
+`기초답변` __init__ 의 뜻은 initialize로 '초기화 하다'의 뜻을 가지고 있다.
+<br>
+<br>
+`내 멋대로 해석`외부에서 인스턴스.클래스 가 호출될 때 들어오는 값이 한 번 초기화를 시켜주어야 한다. 그래야 클래스 자체가 코딩한대로 돌아가기 때문이다. (동일한 클래스로 여러개의 인스턴스를 생성할 수 있다. 만약 인스턴스를 실행시킬 때마다 호출되면 인스턴스를 여러개 만들 수 없지 않은가.)
 <br>
 `실험1.` __hello__ 로 메서드명 생성
 결과> 클래스 자체에는 오류가 발생하지 않는다.
 <br>
-그러나 인스턴스를 할당(mht = User('문형태', 0, 0)하면 아래와 같은 오류가 발생한다.
+그러나 인스턴스를 생성
 <br>
+(mht = User('문형태', 0, 0)하면 아래와 같은 오류가 발생한다.
+<br>
+
 ```
 TypeError                                 Traceback (most recent call last)
 <ipython-input-19-67beda220de8> in <module>()
@@ -81,12 +79,13 @@ TypeError: object() takes no parameters
 ```
 (당장 내가 보고 해석할 짬은 안된다.)
 <br>
-
-`실험2` 인스턴스를 생성할 때 init 로 초기화된다면, 인스턴스에 아무값이나 넣어도 될까?
+<br>
+`실험2` 인스턴스를 생성할 때 init 으로 초기화된다면, 인스턴스에 아무값이나 넣어도 될까?
 test1) mht = User('문형태', 3, 5)
 test2 mht = User('문형태', '', '')
 <br>
-`결과`코딩은 정상적으로 작동한다. 역시 초기화다.
+`결과`코딩은 정상적으로 작동한다. 인스턴스를 생성할 때 1회 초기화가 되기 때문에 mht의 attribute 값은 class User 의 값에 대입이 된다.(**조금 더 생각해보기**)
+
 ```
 def __init__(atk, defense):
 self.atk = 0
@@ -121,12 +120,8 @@ mht.equip(sword1)
 1) mht.equip(sword1)를 호출
 1-1) `mht`('문형태', 0, 0)
 <br>
-
-
 1-2) `equip` > class 접근 > 클래스 안의 equip 메서드에 접근
 1-2-1)
 <br>
-
-
 1-3) `sword1` > 선언한 인스턴스 sword() 접근 > 클래스 sword 접근
 <br>
