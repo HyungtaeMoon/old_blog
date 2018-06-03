@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "웹사이트 이미지 크롤링하는 방법"
+title:  "웹사이트 이미지 크롤링하는 방법(1)"
 date:   2018-06-02 17:56:04 +0700
 categories: [python]
 ---
@@ -57,6 +57,9 @@ url 주소를 html 형식으로 변경해주는 모듈
 
 [requests 설치]
 >> pip install requests
+
+[lxml 설치]
+>> pip install lxml
 ```
 <br>
 <br>
