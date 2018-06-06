@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "클래스의 객체명의 작명은 어떻게 할까"
+title:  "[생각] 클래스의 객체명의 작명은 어떻게 할까"
 date:   2018-05-31 18:20:04 +0700
 categories: [python]
 ---

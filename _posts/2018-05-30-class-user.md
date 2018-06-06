@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "코드분석"
+title:  "[실전] 클래스(공격력, 방어력 증가)"
 date:   2018-05-30 19:41:04 +0700
 categories: [python, security]
 ---

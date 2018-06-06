@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "웹사이트 이미지 크롤링하는 방법(1)"
+title:  "[설정] 파이참 모듈 설치, 크롤링"
 date:   2018-06-02 17:56:04 +0700
 categories: [python]
 ---

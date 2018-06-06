@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "웹사이트 이미지 크롤링하는 방법(2)"
+title:  "[설정][실전] BeaitifulSoup 사용방법"
 date:   2018-06-02 17:56:04 +0700
 categories: [python]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "장고 환경설정 방법"
+title:  "[설정] 장고 환경설정 방법"
 date:   2018-06-01 17:56:04 +0700
 categories: [python]
 ---

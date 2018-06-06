@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "클래스(실전편)"
+title:  "[실전] 클래스 만들어보기(소지금 증가 클래스)"
 date:   2018-05-27 18:20:04 +0700
 categories: [python]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "파이참 환경설정"
+title:  "[설정] 파이참 환경설정 방법"
 date:   2018-05-28 18:20:04 +0700
 categories: [python]
 ---
