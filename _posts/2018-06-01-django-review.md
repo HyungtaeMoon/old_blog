@@ -4,69 +4,96 @@ title:  "[설정] 장고 환경설정 방법"
 date:   2018-06-01 17:56:04 +0700
 categories: [python]
 ---
-`Django``환경설정`
+`Django` `환경설정` `수업따라가기`
 <br>
 <br>
-장고(Django)환경 설정 방법
+#### # 장고(Django)환경 설정 방법
+<br>
 <br>
 `django 디렉토리 생성`
-<br>
-`git init`
-<br>
-`vi .gitignore`
-**문서 편집기로 .gitignore 생성**
-<br>
-`gitignore.io 사이트에서 아래 리스트 추가`
 ```
-.gitignore (python django, macos, linux, git, pycharm+all)
+> mkdir 디렉토리명(생성)
+
+> cd 디렉토리명(진입)
 ```
 <br>
-`pyenv virtualenv 3.6.5 fc-djangogirls`
-가상환경 설정(설정이름: fc-djangogirls)
+`내 깃허브에 new repository 생성`
+<br>
+```
+> git 홈페이지
+https://github.com/
+
+> 새로운 .git 저장소 만들기
+git init
+
+```
+<br>
+`.gitignore 생성`
+```
+> gitignore 홈페이지
+https://www.gitignore.io/
+
+> 추가 항목
+python django, macos, linux, git, pycharm+all
+
+> create버튼 클릭
+
+> 생성한 텍스트 파일을 .gitignore에 붙여넣기
+vi .gitignore
+```
+<br>
+`requirements 기록하기`
+```
+pip freeze > requirements.txt
+
+다른 개발자가 동일한 환경에서 설정해서 구현하도록
+requirements.txt는 현재 버전의 정보를 저장
+```
+<br>
+`블로그 설치하기`
+```
+python manage.py startapp
+```
+<br>
+`migration 추가하기`
+```
+python manage.py makemigrations
+
+python manage.py migrate
+```
+<br>
+`가상환경 설정`
+```
+> 가상환경 설치하기
+pyenv virtualenv 3.6.5 [원하는 가상환경 이름 설정]
+
+> 가상환경으로 진입하기
+pyenv local [작성한 가상환경 이름]
+```
 <br>
 <br>
 `PyCharm Interpreter 설정`
 ```
 파이참 안에서 환경 설정(Ctrl + Alr + S) 실행
+
 Project:djangogirls-tutorial
+
 Interpreter
+
 Project Interpreter
+
 나의 현재 디렉토리 위치로 설정(없으면 추가)
 (설정하는 이유는 charm . 을 작업 폴더 안에서 실행하기 위함)
 ```
 <br>
-<br>
-가상환경 fc-djangogirls 가 설정되어있는지 확인
-pip list 로 확인
+`Django 설치하기`
 ```
-Package     Version
-------------------
-pip         9.0.3
-setuptools  39.0.1
+pip install django
 ```
 <br>
-`Django 설치`
-pip install django~=1.11.0
-<br>
+`Django가 설치되었는지 확인`
 ```
-Package     Version
------------------------
-Django        1.11.13
-pip           9.0.3
-pytz          2018.4
-setuptools    39.0.1
-```
-<br>
-<br>
-`pip install --upgrade pip`
-<br>
-```
-Package     Version
------------------------
-Django        1.11.13
-pip           10.0.1
-pytz          2018.4
-setuptools    39.0.1
+pip --list
 ```
 <br>
 <br>

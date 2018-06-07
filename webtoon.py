@@ -108,6 +108,8 @@ def select_webtoon_menu(webtoon):
         else:
             print('올바른 입력이 아닙니다. 다시 선택해주세요')
 
-
+            # 숫자를 잘못눌렀을 때 whilte True의
+            # 상단으로 다시 진입. 제대로 된 선택을
+            # 할 때까지 무한반복
 if __name__ == '__main__':
     ini()

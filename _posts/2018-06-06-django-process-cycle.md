@@ -14,8 +14,8 @@ categories: [python]
 
 >브라우저 주소창에 www.google.co.kr라는 url을 작성하고 엔터치면 구글 웹페이지가 나온다.
 
-<br>
-이 현상이 단순하게 **척하면 척하고** 이루어지는 것이 아니라 _수많은 과정들을 거쳐서 우리에게 보여진다는 것_ 을 아주 조금 알게 되었다.
+
+이 작업이 단순하게 **척하면 척하고** 이루어지는 것이 아니라 _많은 과정들을 거쳐서 우리에게 보여진다는 것_ 을 아주 조금 알게 되었다.
 <br>
 (정리한다고 했지만 현재는 정확하지도 않아 이 포스팅을 나중에 보면 전면 수정해야 할지도 모르겠다.)
 <br>
@@ -27,7 +27,6 @@ categories: [python]
 abcdeapple.com/gooood?titleId=345345&weekday=wed
 
 ```
-<br>
 <br>
 이러한 방식이 `get 방식`이다. (응??? 끝???)
 <br>
@@ -41,14 +40,28 @@ _처음에만 받은 DB를 저장하고 이후에는 저장한 데이터를 이�
 <br>
 <br>
 <br>
-### # post방식
-데이터 전송을 기반으로 한 메서드로 `html의 body에 데이터`를 넣어서 보내준다.(이러한 이유로 보안성은 get보다 조금 더 낫다), DB에 변화를 주는 동작은 post에 요청해야 한다.
+#### 그래서 HTML 소스에서 어떻게 적용을 시키나?
 <br>
-<br>
-<br>
-### # post방식의 사용
+> <form action={method="GET"}>
 
-view function의 동작
+<br>
+<br>
+<br>
+### # post방식
+데이터 전송을 기반으로 한 메서드로 `html의 body에 데이터`를 넣어서 보내준다.
+<br>
+(이러한 이유로 보안성은 get보다 조금 더 낫다)
+<br>
+<br>
+DB에 변화를 주는 동작은 post에 요청해야 한다.
+<br>
+<br>
+post요청은 csrf token태그를 각 form안에 사용
+<br>
+<br>
+### # post방식의 정의내리기
+
+view function의 동작(#실습)
 <br>
 1. 오로지 `request.method가 'POST'일 때`만 동작<br>
   (request.method가 'GET'일 때는 아무 동작도 안 해도 됨)<br><br>
@@ -73,18 +86,21 @@ post.delete()
 
 return redirect('post-list')
 # 위의 작업이 끝나면 리다이렉트 시킨다
-
 ```
-`포스트 아이디에 오는 것을 redirect 하고 post를 지웠다.`
+
+<br>
+#### 그래서 HTML 소스에서 어떻게 적용을 시키나?
+<br>
+> <form action={method="POST"}>
+
+form을 정의할 때 method에 POST 라고 설정
 <br>
 <br>
-#### HTML 파일에서는 어떻게 적용을 시키나?
-```
-<form action="{% url 'post-delete' post.id%}" method="POST">
-
-form을 설정할 때 method에 POST 라고 설정하면 Post 메서드를 사용한다고 정의
-```
-
+### 한마디로
+<br>
+`get은 페이지를 보기만 할 때 사용하고,`
+<br>
+`post는 내용을 수정할 때 사용한다.`
 <br>
 <br>
 ### # 용어정리
