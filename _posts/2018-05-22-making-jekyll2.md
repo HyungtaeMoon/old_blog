@@ -67,8 +67,3 @@ vi _config.yml
 ```
 bundle exec jekyll serve
 ```
-<br/>
-<br/>
-# 이 외에도 git 과 관련한 커맨드는 많다.
-<br/>
-# 다음에는 명령어 하나 하나의 의미가 무엇인지 포스팅한다.
